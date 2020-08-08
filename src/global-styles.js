@@ -9,7 +9,20 @@ const GlobalStyle = createGlobalStyle`
   .centered {
     text-align: center;
   }
-  
+
+  .card__size {
+    display: flex;
+    align-items: center;
+    img {
+      min-width: 350px;
+    }
+  }
+
+.scrolling {
+  box-shadow:0 1px 2px rgba(0,0,0,0.14);
+  transition: all 0.5s cubic-bezier(.25,.8,.25,1);
+}
+
   *,
   *:before,
   *:after {

@@ -12,6 +12,10 @@ export const HeroWrapper = styled.div`
   overflow: hidden;
   position: relative;
   width: 100%;
+
+  @media only screen and (max-width: 668px) {
+    flex-direction: column;
+  }
 `
 
 export const HeroImage = styled.div`
@@ -19,20 +23,37 @@ export const HeroImage = styled.div`
   svg {
     max-width: 100%;
   }
+
+  @media only screen and (max-width: 668px) {
+    width: 100%;
+    padding: 10px;
+    svg {
+      max-height: 350px;
+    }
+  }
 `
 
 export const HeroText = styled.div`
-  width: 50%;
   text-align: left;
+
+  @media only screen and (min-width: 668px) {
+    width: 50%;
+  }
 `
 
 export const CardDiv = styled.div`
   background: #f7fafd;
-  padding: 15px;
+  padding: 20px;
   border-radius: 2px;
-  width: 75%;
   display: flex;
   margin: 15px 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media only screen and (min-width: 1200px) {
+    width: 75%;
+    flex-direction: row;
+  }
 
   img {
     height: 200px;

@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 
+import { Div } from "../Div"
 import Image from "../Image"
 import Nav from "../Nav"
 import MenuLink from "../MenuLink"
@@ -10,16 +11,21 @@ export class Header extends Component {
     return (
       <Nav>
         <Container>
-          <div
-            style={{ maxWidth: `50px`, position: `absolute`, width: `50px` }}
+          <Div
+            style={{
+              maxWidth: `50px`,
+              position: `absolute`,
+              width: `50px`,
+            }}
           >
             <Image />
-          </div>
-          <MenuLink href="#yeet" class="nav-link">
-            My Work
-          </MenuLink>
-          <MenuLink href="#yeet2" className="nav-link">
+          </Div>
+
+          <MenuLink href="#contact" className="nav-link">
             Contact Me
+          </MenuLink>
+          <MenuLink href="#work" class="nav-link">
+            My Work
           </MenuLink>
         </Container>
       </Nav>
