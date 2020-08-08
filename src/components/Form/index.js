@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 import styled from "styled-components"
 
 import Container from "../Container"
@@ -42,8 +42,6 @@ const TextArea = styled.textarea`
   font-size: 1.6em;
 `
 
-const Label = styled.label``
-
 const Button = styled.button`
   padding: 15px;
   outline: none;
@@ -54,8 +52,6 @@ const Button = styled.button`
   cursor: pointer;
   width: 25%;
 `
-
-const ButtonDiv = styled.button``
 
 const Form = () => {
   return (
