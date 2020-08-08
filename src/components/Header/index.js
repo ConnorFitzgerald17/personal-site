@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 
 import { Div } from "../div"
-import Image from "../Image"
+import Image from "../image"
 import Nav from "../Nav"
 import MenuLink from "../MenuLink"
 import Container from "../Container"
