@@ -1,48 +1,26 @@
-import Image from 'next/image'
+import Image from "next/image"
 
-import { Card } from '@/components/Card'
-import { SimpleLayout } from '@/components/SimpleLayout'
-import logoAnimaginary from '@/images/logos/animaginary.svg'
-import logoCosmos from '@/images/logos/cosmos.svg'
-import logoHelioStream from '@/images/logos/helio-stream.svg'
-import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
+import { Card } from "@/components/Card"
+import { SimpleLayout } from "@/components/SimpleLayout"
+import logoTysega from "@/images/logos/tysega.png"
+import logoBOC from "@/images/logos/boc3.svg"
 
 const projects = [
   {
-    name: 'Planetaria',
+    name: "Bank of Canada - Vertical $10 Bill Page",
     description:
-      'Creating technology to empower civilians to explore space on their own terms.',
-    link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
-    logo: logoPlanetaria,
+      "As part of a small team of developers at the Bank of Canada, I helped design and develop a product that showcases everything the note has to offer in a creative and user friendly way.",
+    link: {
+      href: "https://www.bankofcanada.ca/banknotes/vertical10/",
+      label: "bankofcanada.ca",
+    },
+    logo: logoBOC,
   },
   {
-    name: 'Animaginary',
-    description:
-      'High performance web animation library, hand-written in optimized WASM.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoAnimaginary,
-  },
-  {
-    name: 'HelioStream',
-    description:
-      'Real-time video streaming library, optimized for interstellar transmission.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoHelioStream,
-  },
-  {
-    name: 'cosmOS',
-    description:
-      'The operating system that powers our Planetaria space shuttles.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoCosmos,
-  },
-  {
-    name: 'OpenShuttle',
-    description:
-      'The schematics for the first rocket I designed that successfully made it to orbit.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoOpenShuttle,
+    name: "Tysega",
+    description: "RELIABLE, FRIENDLY, CLEAN AND AFFORDABLE LIVING",
+    link: { href: "https://www.tysega.com/", label: "tysega.com" },
+    logo: logoTysega,
   },
 ]
 
@@ -58,21 +36,21 @@ function LinkIcon(props) {
 }
 
 export const metadata = {
-  title: 'Projects',
-  description: 'Things I’ve made trying to put my dent in the universe.',
+  title: "Projects",
+  description: "Things I’ve made trying to put my dent in the universe.",
 }
 
 export default function Projects() {
   return (
     <SimpleLayout
-      title="Things I’ve made trying to put my dent in the universe."
-      intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+      title="Some of my public projects"
+      intro="I've been fortunate to be a part of a myriad of engaging projects, spanning both private endeavors and public ventures. These experiences have allowed me to navigate a spectrum of challenges and opportunities, honing my skills in a dynamic range of contexts. From discreet, specialized projects to those with a broader public impact, each has contributed to my growth as a developer and my appreciation for the diverse landscapes of software development."
     >
       <ul
         role="list"
         className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
       >
-        {projects.map((project) => (
+        {projects.map(project => (
           <Card as="li" key={project.name}>
             <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
               <Image
